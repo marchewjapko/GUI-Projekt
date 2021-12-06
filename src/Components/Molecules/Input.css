@@ -1,0 +1,27 @@
+.centerImage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+
+.rectangle {
+    display: inline-block;
+    width: 295px;
+    height: 65px;
+    background: #202020;
+    border: 2px solid #808080;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.input {
+    width: 200px;
+    height: 55px;
+    margin-left: 14px;
+    font-size: 24px;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: #ffffff;
+    outline: none;
+}
