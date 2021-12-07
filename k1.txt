@@ -10,24 +10,11 @@ Projekt w Figma oceniam na 4-6 godzin.
 
 
 
-
-
-
-
-
-1 diagram przypadków użycia systemowych
-
 2 scenariusze funkcjonalne
-
-2 diagramy abstrakcyjnego modelu interfejsu użytkownika (ten model musi być zgody z późniejszą Figmą)
-
-1 diagram sekwencyjny interakcji użytkownika z abstrakcyjnymi elementami interfejsu
-
 
 
 
 ----------------zrobione-----------------
-
 
 
 Projekt abstrakcyjny - model interfejsu wykonany w metodyce UCD z wykorzystaniem UML. Oczekuję w szczególności:
@@ -36,6 +23,9 @@ Projekt abstrakcyjny - model interfejsu wykonany w metodyce UCD z wykorzystaniem
 1 diagram zadań (przypadków użycia biznesowych - bez systemu!)
 1 scenariusz biznesowy (diagram aktywności)
 1 diagram obiektów dziedzinowych z atrybutami i zależnościami
+2 diagramy abstrakcyjnego modelu interfejsu użytkownika (ten model musi być zgody z późniejszą Figmą)
+1 diagram sekwencyjny interakcji użytkownika z abstrakcyjnymi elementami interfejsu
+1 diagram przypadków użycia systemowych - jak użytkownik dostaje się do widoku zamówień
 
 
 Gotowy system projektowy w Figma do zadania Dashboard sprzedawcy. System projektowy nie 
