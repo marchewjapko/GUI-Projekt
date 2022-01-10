@@ -1,14 +1,17 @@
 import React, {useState} from "react";
+import Switch from "react-switch";
 import "./LogInPage.js.css"
 import {ReactComponent as UKIcon} from "../../Images/UK-Flag.svg";
-import Switch from "react-switch";
 import {ReactComponent as AccountIcon} from "../../Images/Account.svg";
 import {ReactComponent as PasswordIcon} from "../../Images/Lock.svg";
 import {ReactComponent as ArrowRightIcon} from "../../Images/Arrow-Right.svg";
 import {ReactComponent as Moon} from "../../Images/Moon.svg";
 import {ReactComponent as Sun} from "../../Images/Sun.svg";
+import {ReactComponent as PolandIcon} from "../../Images/Poland-Flag.svg";
+import { useTranslation } from 'react-i18next';
 
 function LogInPage() {
+    const [useEnglish, setUseEnglish] = useState(true);
     const [darkMode, setDarkMode] = useState(true);
     const setDark = () => {
         localStorage.setItem("theme", "dark");
@@ -18,13 +21,13 @@ function LogInPage() {
         localStorage.setItem("theme", "light");
         document.documentElement.setAttribute("data-theme", "light");
     };
-    const toggleTheme = (nextDarkMode) => {
+    const toggleTheme = () => {
         if (darkMode) {
             setLight();
         } else {
             setDark();
         }
-        setDarkMode(nextDarkMode);
+        setDarkMode(!darkMode);
     };
     if (darkMode) {
         setDark();
@@ -34,11 +37,21 @@ function LogInPage() {
     const handleClick = () => {
         console.log("LOGIN")
     }
+    const languageClick = () => {
+        setUseEnglish(!useEnglish)
+        if(useEnglish) {
+            i18n.changeLanguage('pl')
+        } else {
+            i18n.changeLanguage('en')
+        }
+    }
+    const {t, i18n} = useTranslation('common');
     return (
         <div className={"logInPage"}>
             <div className={"head"}>
-                <button className={"languageButton"}>
-                    <UKIcon className={"englishIcon"}/>
+                <button className={"languageButton"} onClick={languageClick}>
+                    {useEnglish === true && (<UKIcon className={"languageIcon"}/> )}
+                    {useEnglish === false && (<PolandIcon className={"languageIcon"}/> )}
                 </button>
                 <Switch
                     checked={darkMode}
@@ -69,13 +82,13 @@ function LogInPage() {
             <div className={"rectangle"}>
                 <div className={"centerImage"}>
                     <AccountIcon className={"accountIconSmall"}/>
-                    <input type="text" name="name" placeholder={"Username"} className={"input"}/>
+                    <input type="text" name="name" placeholder={t('username')} className={"input"}/>
                 </div>
             </div>
             <div className={"rectangle"}>
                 <div className={"centerImage"}>
                     <PasswordIcon className={"passwordIcon"}/>
-                    <input type="password" name="password" placeholder={"Password"} className={"input"}/>
+                    <input type="password" name="password" placeholder={t('password')} className={"input"}/>
                 </div>
             </div>
             <button className={"loginButton"} onClick={handleClick}>
