@@ -1,38 +1,144 @@
 .logInPage {
     width: 100%;
     height: 100%;
-    background: #505050;
     text-align: center;
-}
-
-.control {
-    margin: 20px;
-}
-
-.layerIcon {
-    border: 2px solid rgba(0,0,0,0);
-}
-
-.container_row{
-    display: grid;
-    text-align: center;
-}
-
-.layerIcon, .layerIconBackground{
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.layerIconBackground{
-    background: white;
-    height: 100px;
-    width: 100px;
-    border-radius: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border: 2px solid #808080;
+    background-color: var(--pageColor);
 }
 
 .head {
     text-align: right;
+    height: 55px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.languageButton {
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    width: 60px;
+    height: 40px;
+    margin-left: auto;
+    padding: 0;
+    overflow:auto;
+    display: table;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.englishIcon {
+    filter: drop-shadow( 0px 2px 2px rgba(0, 0, 0, .5));
+    width: 60px;
+    height: 40px;
+    display: table-row;
+}
+
+.react-switch {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+}
+
+.switchIcon {
+    width: 70%;
+    height: 70%;
+    margin-top: 6px;
+    fill: var(--switchIconColor);
+}
+
+.switchIconDiv {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.accountIconBig {
+    filter: drop-shadow( 0px 4px 4px rgba(0, 0, 0, .5));
+    fill: var(--fillAccountIconBig);
+    background: var(--backgroundAccountIconBig);
+    border-radius: 100%;
+    border: 2px solid #808080;
+    width: 100px;
+    height: 100px;
+}
+
+.accountIconSmall {
+    fill: var(--inputIconColor);
+    width: 40px;
+    height: 40px;
+}
+
+.rectangle {
+    width: 295px;
+    height: 65px;
+    background: var(--inputBackground);
+    border: 2px solid #808080;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+.passwordIcon {
+    fill: var(--inputIconColor);
+    width: 40px;
+    height: 40px;
+}
+
+.input {
+    width: 200px;
+    height: 55px;
+    margin-left: 13px;
+    font-size: 24px;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: var(--inputTextColor);
+    outline: none;
+}
+
+.centerImage {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 13px;
+}
+
+.loginButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: var(--loginButtonColor);
+    border: 2px solid #808080;
+    box-sizing: border-box;
+    filter: drop-shadow( 0px 4px 4px rgba(0, 0, 0, .5));
+    margin-bottom: 20px;
+}
+
+.arrow {
+    width: 25px;
+    height: 25px;
+    color: var(--arrowColor);
+    margin-top: 3px;
+}
+
+[data-theme='dark'] {
+    --pageColor: #505050;
+    --switchIconColor: white;
+    --backgroundAccountIconBig: white;
+    --fillAccountIconBig: black;
+    --inputBackground: #202020;
+    --inputTextColor: white;
+    --inputIconColor: white;
+    --loginButtonColor: #202020;
+    --arrowColor: white;
+}
+
+[data-theme='light'] {
+    --pageColor: white;
+    --switchIconColor: black;
+    --backgroundAccountIconBig: #AAAAAA;
+    --fillAccountIconBig: white;
+    --inputBackground: #D1D1D1;
+    --inputTextColor: black;
+    --inputIconColor: black;
+    --loginButtonColor: white;
+    --arrowColor: #808080;
 }

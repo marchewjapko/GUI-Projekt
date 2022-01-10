@@ -1,32 +1,87 @@
-import React from "react";
-import UsernameInput from "../Molecules/UsernameInput";
-import PasswordInput from "../Molecules/PasswordInput";
-import LogInButton from "../Atoms/LogInButton";
-import AccountIcon from "../Atoms/AccountIcon";
-import UKIcon from "../Atoms/UKIcon";
-import DarkModeIcon from "../Atoms/DarkModeIcon";
+import React, {useState} from "react";
 import "./LogInPage.js.css"
+import {ReactComponent as UKIcon} from "../../Images/UK-Flag.svg";
+import Switch from "react-switch";
+import {ReactComponent as AccountIcon} from "../../Images/Account.svg";
+import {ReactComponent as PasswordIcon} from "../../Images/Lock.svg";
+import {ReactComponent as ArrowRightIcon} from "../../Images/Arrow-Right.svg";
+import {ReactComponent as Moon} from "../../Images/Moon.svg";
+import {ReactComponent as Sun} from "../../Images/Sun.svg";
 
 function LogInPage() {
+    const [darkMode, setDarkMode] = useState(true);
+    const setDark = () => {
+        localStorage.setItem("theme", "dark");
+        document.documentElement.setAttribute("data-theme", "dark");
+    };
+    const setLight = () => {
+        localStorage.setItem("theme", "light");
+        document.documentElement.setAttribute("data-theme", "light");
+    };
+    const toggleTheme = (nextDarkMode) => {
+        if (darkMode) {
+            setLight();
+        } else {
+            setDark();
+        }
+        setDarkMode(nextDarkMode);
+    };
+    if (darkMode) {
+        setDark();
+    } else {
+        setLight();
+    }
     const handleClick = () => {
-        console.log()
+        console.log("LOGIN")
     }
     return (
         <div className={"logInPage"}>
             <div className={"head"}>
-                <UKIcon width={"60px"} height={"40px"} color={"black"}/>
-                <DarkModeIcon width={"40px"} height={"40px"} color={"black"} backgroundColor={"white"}/>
+                <button className={"languageButton"}>
+                    <UKIcon className={"englishIcon"}/>
+                </button>
+                <Switch
+                    checked={darkMode}
+                    onChange={toggleTheme}
+                    onColor="#202020"
+                    onHandleColor="#505050"
+                    offColor="#D1D1D1"
+                    offHandleColor="#FFFFFF"
+                    handleDiameter={25}
+                    height={35}
+                    width={75}
+                    boxShadow="0px 4px 4px rgba(0, 0, 0, 0.5)"
+                    activeBoxShadow="0px 4px 4px 10px rgba(0, 0, 0, 0.5)"
+                    uncheckedIcon={
+                        <div className={"switchIconDiv"}>
+                            <Sun className={"switchIcon"}/>
+                        </div>
+                    }
+                    checkedIcon={
+                        <div className={"switchIconDiv"}>
+                            <Moon className={"switchIcon"}/>
+                        </div>
+                    }
+                    className="react-switch"
+                />
             </div>
-            <AccountIcon width={"100px"} height={"100px"} color={"black"} backgroundColor={"white"} border={'3'}/>
-            <div className={"control"}>
-                <UsernameInput/>
+            <AccountIcon className={"accountIconBig"}/>
+            <div className={"rectangle"}>
+                <div className={"centerImage"}>
+                    <AccountIcon className={"accountIconSmall"}/>
+                    <input type="text" name="name" placeholder={"Username"} className={"input"}/>
+                </div>
             </div>
-            <div className={"control"}>
-                <PasswordInput/>
+            <div className={"rectangle"}>
+                <div className={"centerImage"}>
+                    <PasswordIcon className={"passwordIcon"}/>
+                    <input type="password" name="password" placeholder={"Password"} className={"input"}/>
+                </div>
             </div>
-            <LogInButton handleClick={handleClick}/>
+            <button className={"loginButton"} onClick={handleClick}>
+                <ArrowRightIcon className={"arrow"}/>
+            </button>
         </div>
     );
 }
-
 export default LogInPage;
