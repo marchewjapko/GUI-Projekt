@@ -1,0 +1,42 @@
+Na pierwszy kamień milowy należy przygotować:
+
+Opracowana koncepcja modułu Dashboard sprzedawcy (chodzi o analizę i opracowanie wymagań dostarczonych do 
+realizacji w formie dokumentu Word, analiza i opracowanie powinny między innymi obejmować analizę 
+w metodyce MoSCoW, powinno jasno być uwzględnione, co będzie zrobione i ile mniej więcej czasu 
+cała realizacji w godzinach roboczych wam zajmie, proszę przeanalizować potencjalne problemy i ewentualne 
+niejasności). Analiza MoSCoW powinna obejmować samą implementację, ale również przygotowanie projektu i 
+dokumentacji. Nawet UMLa poniżej, którego przygotowanie ja oceniam na 2-3 godzin. 
+Projekt w Figma oceniam na 4-6 godzin.
+
+
+
+2 scenariusze funkcjonalne
+
+
+
+----------------zrobione-----------------
+
+
+Projekt abstrakcyjny - model interfejsu wykonany w metodyce UCD z wykorzystaniem UML. Oczekuję w szczególności:
+
+1 diagram aktorów,
+1 diagram zadań (przypadków użycia biznesowych - bez systemu!)
+1 scenariusz biznesowy (diagram aktywności)
+1 diagram obiektów dziedzinowych z atrybutami i zależnościami
+2 diagramy abstrakcyjnego modelu interfejsu użytkownika (ten model musi być zgody z późniejszą Figmą)
+1 diagram sekwencyjny interakcji użytkownika z abstrakcyjnymi elementami interfejsu
+1 diagram przypadków użycia systemowych - jak użytkownik dostaje się do widoku zamówień
+
+
+Gotowy system projektowy w Figma do zadania Dashboard sprzedawcy. System projektowy nie 
+powinien być zbyt obszerny i skupiać się na organizmach wykorzystywanych w Dashboard. 
+Można darować sobie typografię, itp... ale przyciski CTA, kolorystyka powinny być.
+
+Projekt implementacji z użyciem Reacta - diagram UML. Wymienione wszystkie biblioteki, 
+Opisana koncepcja implementacji, przechowywania stanu. Diagram UML powinien pokazywać, 
+gdzie stan będzie przechowywany.
+
+Szkielet implementacji. Powinien to być gotowy szkielet implementacji wyświetlający na 
+ekranie gotową, ale jeszcze statyczną bez jakiejkolwiek interakcji stronę. Projekt powinien 
+już uwzględniać założenia wymagań niefunkcjonalnych takich jak wielojęzyczność i 
+tematy kolorystyczne (dark, light).
