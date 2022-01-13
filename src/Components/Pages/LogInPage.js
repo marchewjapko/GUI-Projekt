@@ -10,13 +10,11 @@ import Head from "../Molecules/Head";
 import {useNavigate} from "react-router-dom"
 
 function LogInPage() {
-    const [useEnglish, setUseEnglish] = useState(true);
-    const {t, i18n} = useTranslation(['loginPage']);
-    const handleClick = () => {
-        navigate("/MainPage");
-    }
+    const {t} = useTranslation(['loginPage']);
     let navigate = useNavigate();
-
+    const handleClick = () => {
+        navigate("/main-page");
+    }
     return (
         <div className={"logInPage"}>
             <Head/>

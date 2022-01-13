@@ -1,0 +1,23 @@
+.widget {
+    width: auto;
+    height: 300px;
+}
+
+.legend {
+    color: var(--legendColor);
+    padding: 5px;
+}
+
+.tooltip {
+    padding: 1px 10px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+[data-theme='dark'] {
+    --legendColor: white;
+}
+
+[data-theme='light'] {
+    --legendColor: black;
+}

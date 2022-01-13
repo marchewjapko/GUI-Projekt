@@ -3,6 +3,18 @@
     height: 100%;
     text-align: center;
     background-color: var(--pageColor);
+    display: flex;
+    flex-flow: column;
+    height: 95vh;
+}
+
+.mainPageBody {
+    overflow-y: scroll;
+    width: 100%;
+    height: 100%;
+    border-top-color: black;
+    border-top-width: 1px;
+    border-style: solid;
 }
 
 .welcomeText {

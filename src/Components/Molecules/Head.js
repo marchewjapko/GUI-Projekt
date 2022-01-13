@@ -5,14 +5,12 @@ import Switch from "react-switch";
 import {ReactComponent as Sun} from "../../Images/Sun.svg";
 import {ReactComponent as Moon} from "../../Images/Moon.svg";
 import {useTranslation} from "react-i18next";
-import {useEffect} from "react";
 import "./Head.js.css"
 
 function Head() {
-    const {t, i18n} = useTranslation('common');
+    const {i18n} = useTranslation();
     const [useEnglish, setUseEnglish] = useState(i18n.language === 'en');
-
-    const [darkMode, setDarkMode] = useState(true);
+    const [checked, setChecked] = useState(localStorage.getItem("useDarkMode") === "true");
     const languageClick = () => {
         setUseEnglish(!useEnglish)
         if(useEnglish) {
@@ -22,27 +20,23 @@ function Head() {
         }
     }
     const setDark = () => {
-        localStorage.setItem("theme", "dark");
+        localStorage.setItem("useDarkMode", "true");
+        setChecked(true);
         document.documentElement.setAttribute("data-theme", "dark");
     };
     const setLight = () => {
-        localStorage.setItem("theme", "light");
+        localStorage.setItem("useDarkMode", "false");
+        setChecked(false);
         document.documentElement.setAttribute("data-theme", "light");
     };
     const toggleTheme = () => {
-        if (darkMode) {
+        if (localStorage.getItem("useDarkMode") === "true") {
             setLight();
         } else {
             setDark();
         }
-        setDarkMode(!darkMode);
+        console.log(checked)
     };
-    if (darkMode) {
-        setDark();
-    } else {
-        setLight();
-    }
-
     return(
         <div className={"head"}>
             <button className={"languageButton"} onClick={languageClick}>
@@ -50,7 +44,7 @@ function Head() {
                 {useEnglish === false && (<PolandIcon className={"languageIcon"}/> )}
             </button>
             <Switch
-                checked={darkMode}
+                checked={checked}
                 onChange={toggleTheme}
                 onColor="#202020"
                 onHandleColor="#505050"
