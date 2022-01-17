@@ -12,8 +12,17 @@ function MainPage() {
                 <Head/>
             </div>
             <div className={"mainPageBody"}>
-                <h1 className={"welcomeText"}>{t('welcomeText')} </h1>
-                <OrdersWidget/><OrdersWidget/><OrdersWidget/><OrdersWidget/><OrdersWidget/><OrdersWidget/>
+                <div className={"grid"}>
+                    <div className={"elem1"}>
+                        <OrdersWidget/>
+                    </div>
+                    <div className={"elem2"}>
+                        <OrdersWidget/>
+                    </div>
+                    <div className={"elem3"}>
+                        <OrdersWidget/>
+                    </div>
+                </div>
             </div>
         </div>
     );

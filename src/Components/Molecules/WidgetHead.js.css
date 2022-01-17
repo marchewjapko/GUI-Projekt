@@ -1,0 +1,21 @@
+.widgetHead {
+    height: 65px;
+    width: 100%;
+    background-color: var(--widgetHeadBackgroundColor);
+    line-height: 65px;
+    font-size: 2em;
+}
+
+.widgetHeadText {
+    margin-left: 15px;
+}
+
+[data-theme='dark'] {
+    --widgetHeadBackgroundColor: #202020;
+    --widgetFontColor: #505050;
+}
+
+[data-theme='light'] {
+    --widgetHeadBackgroundColor: #FFFFFF;
+    --widgetFontColor: #FFFFFF;
+}

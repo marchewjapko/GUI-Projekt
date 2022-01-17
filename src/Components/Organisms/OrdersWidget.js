@@ -3,6 +3,7 @@ import {PieChart, Pie, Legend, Tooltip, Cell, ResponsiveContainer} from "rechart
 import "./OrdersWidget.js.css"
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
+import WidgetHead from "../Molecules/WidgetHead";
 
 function OrdersWidget() {
     const {t} = useTranslation(['ordersWidget']);
@@ -35,28 +36,27 @@ function OrdersWidget() {
 
     return (
         <div className={"widget"}>
-            <ResponsiveContainer>
-                <PieChart>
-                    <Legend formatter={renderLegend} />
-                    <Pie
-                        dataKey="value"
-                        isAnimationActive={false}
-                        data={ordersData}
-                        cx="50%"
-                        cy="50%"
-                        fill="#8884d8"
-                        label
-                        onClick={handleClick}
-                        legendType={"circle"}
-                    >
-                        {ordersData.map((entry, index) => (
-                            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}  />
-                        ))}
-                    </Pie>
-                    <Tooltip content={<CustomTooltip />} />
+            <WidgetHead widgetTitle={t("ordersWidgetName")}/>
+            <PieChart width={400} height={400} >
+                <Legend formatter={renderLegend} />
+                <Pie
+                    dataKey="value"
+                    isAnimationActive={false}
+                    data={ordersData}
+                    cx="50%"
+                    cy="50%"
+                    fill="#8884d8"
+                    label
+                    onClick={handleClick}
+                    legendType={"circle"}
+                >
+                    {ordersData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]}  />
+                    ))}
+                </Pie>
+                <Tooltip content={<CustomTooltip />} />
 
-                </PieChart>
-            </ResponsiveContainer>
+            </PieChart>
         </div>
     );
 }

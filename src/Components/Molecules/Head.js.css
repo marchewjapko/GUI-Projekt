@@ -2,6 +2,13 @@
     text-align: right;
     height: 55px;
     display: flex;
+    background-color: var(--headColor);
+}
+
+.welcomeText {
+    height: 100%;
+    line-height: 55px;
+    margin: 0 0 0 20px;
 }
 
 .languageButton {
@@ -41,4 +48,12 @@
     height: 100%;
     width: 100%;
     text-align: center;
+}
+
+[data-theme='dark'] {
+    --headColor: #202020;
+}
+
+[data-theme='light'] {
+    --headColor: #FFFFFF;
 }

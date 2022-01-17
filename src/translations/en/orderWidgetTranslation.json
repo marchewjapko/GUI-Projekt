@@ -2,5 +2,6 @@
   "unpaid": "Unpaid",
   "notsent": "Not sent",
   "returns": "Returns",
-  "goto": "Go to"
+  "goto": "Go to",
+  "ordersWidgetName": "Orders"
 }

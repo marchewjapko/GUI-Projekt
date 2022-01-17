@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 import "./Head.js.css"
 
 function Head() {
-    const {i18n} = useTranslation();
+    const {t, i18n} = useTranslation('head');
     const [useEnglish, setUseEnglish] = useState(i18n.language === 'en');
     const [checked, setChecked] = useState(localStorage.getItem("useDarkMode") === "true");
     const languageClick = () => {
@@ -39,6 +39,7 @@ function Head() {
     };
     return(
         <div className={"head"}>
+            <h1 className={"welcomeText"}>{t('mainPageTitle')} </h1>
             <button className={"languageButton"} onClick={languageClick}>
                 {useEnglish === true && (<UKIcon className={"languageIcon"}/> )}
                 {useEnglish === false && (<PolandIcon className={"languageIcon"}/> )}
@@ -46,15 +47,15 @@ function Head() {
             <Switch
                 checked={checked}
                 onChange={toggleTheme}
-                onColor="#202020"
-                onHandleColor="#505050"
-                offColor="#D1D1D1"
+                onColor="#505050"
+                onHandleColor="#202020"
+                offColor="#C4C4C4"
                 offHandleColor="#FFFFFF"
                 handleDiameter={25}
                 height={35}
                 width={75}
-                boxShadow="0px 4px 4px rgba(0, 0, 0, 0.5)"
-                activeBoxShadow="0px 4px 4px 10px rgba(0, 0, 0, 0.5)"
+                boxShadow="0px 2px 2px rgba(0, 0, 0, 0.5)"
+                activeBoxShadow="0px 2px 2px rgba(0, 0, 0, 0.5)"
                 uncheckedIcon={
                     <div className={"switchIconDiv"}>
                         <Sun className={"switchIcon"}/>
