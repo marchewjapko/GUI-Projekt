@@ -7,8 +7,8 @@ import {ReactComponent as Moon} from "../../Images/Moon.svg";
 import {useTranslation} from "react-i18next";
 import "./Head.js.css"
 
-function Head() {
-    const {t, i18n} = useTranslation('head');
+function Head(props) {
+    const {i18n} = useTranslation();
     const [useEnglish, setUseEnglish] = useState(i18n.language === 'en');
     const [checked, setChecked] = useState(localStorage.getItem("useDarkMode") === "true");
     const languageClick = () => {
@@ -39,7 +39,7 @@ function Head() {
     };
     return(
         <div className={"head"}>
-            <h1 className={"welcomeText"}>{t('mainPageTitle')} </h1>
+            <h1 className={"welcomeText"}>{props.headTitle} </h1>
             <button className={"languageButton"} onClick={languageClick}>
                 {useEnglish === true && (<UKIcon className={"languageIcon"}/> )}
                 {useEnglish === false && (<PolandIcon className={"languageIcon"}/> )}

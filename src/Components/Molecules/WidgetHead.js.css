@@ -1,21 +1,27 @@
 .widgetHead {
+    text-align: left;
     height: 65px;
     width: 100%;
     background-color: var(--widgetHeadBackgroundColor);
+    color: var(--widgetHeadFontColor);
     line-height: 65px;
-    font-size: 2em;
+    font-size: 1.5em;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
 }
 
 .widgetHeadText {
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 [data-theme='dark'] {
     --widgetHeadBackgroundColor: #202020;
     --widgetFontColor: #505050;
+    --widgetHeadFontColor: white
 }
 
 [data-theme='light'] {
-    --widgetHeadBackgroundColor: #FFFFFF;
-    --widgetFontColor: #FFFFFF;
+    --widgetHeadBackgroundColor: white;
+    --widgetFontColor: white;
+    --widgetHeadFontColor: black;
 }

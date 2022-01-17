@@ -1,0 +1,7 @@
+.widget {
+    text-align: center;
+    background-color: var(--widgetBackgroundColor);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding-bottom: 20px;
+}

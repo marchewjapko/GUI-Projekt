@@ -2,6 +2,7 @@ import React from "react";
 import "./MainPage.js.css"
 import Head from "../Molecules/Head";
 import OrdersWidget from "../Organisms/OrdersWidget";
+import ProductRatingWidget from "../Organisms/ProductRatingWidget";
 import {useTranslation} from "react-i18next";
 
 function MainPage() {
@@ -9,7 +10,7 @@ function MainPage() {
     return (
         <div className={"mainPage"}>
             <div>
-                <Head/>
+                <Head headTitle={t('mainPageTitle')}/>
             </div>
             <div className={"mainPageBody"}>
                 <div className={"grid"}>
@@ -17,10 +18,7 @@ function MainPage() {
                         <OrdersWidget/>
                     </div>
                     <div className={"elem2"}>
-                        <OrdersWidget/>
-                    </div>
-                    <div className={"elem3"}>
-                        <OrdersWidget/>
+                        <ProductRatingWidget/>
                     </div>
                 </div>
             </div>

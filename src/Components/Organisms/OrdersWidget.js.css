@@ -1,22 +1,10 @@
-.widget {
-    height: 500px;
-    text-align: center;
-    background-color: var(--widgetBackgroundColor);
-    backdrop-filter: blur(20px);
-    border-radius: 20px;
-}
-
-.widgetHead {
-    text-align: left;
-    background-color: var(--headColor);
-    color: var(--fontColor);
-    width: 100%;
-    height: 65px;
-    line-height: 65px;
-}
-
 .legend {
     color: var(--fontColor);
+}
+
+.pieChart {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tooltip {

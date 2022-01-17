@@ -1,0 +1,102 @@
+.optionBar {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li {
+    display: inline;
+    text-align: center;
+}
+
+ul {
+    padding: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a {
+    display: inline-block;
+    width: 33%;
+    padding: .75rem 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    color: var(--fontColor);
+    font-size: 1em;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+hr {
+    height: .2rem;
+    width: 33.3%;
+    margin: 0;
+    background: var(--fontColor);
+    border: none;
+    transition: .3s ease-in-out;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 1300px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.headRating {
+    min-width: 110px;
+    text-align: center;
+}
+
+.headDate {
+    text-align: right;
+}
+
+th {
+    text-align: left;
+    font-size: 1.5em;
+    background-color: #5675E4;
+    color: white;
+}
+
+td {
+    text-align: left;
+    border-bottom: 1px;
+    border-bottom-color: #808080;
+    border-bottom-style: solid;
+    padding: 5px;
+    color: var(--tableFontColor);
+    word-break: normal;
+    font-size: 0.8em;
+}
+
+.tg .tg-0lax {
+    text-align: left;
+    vertical-align: top
+}
+
+@media only screen and (min-width: 768px) {
+    td {
+        font-size: 1em;
+    }
+
+    a {
+        font-size: 1.5em;
+    }
+}
+
+[data-theme='dark'] {
+    --fontColor: white;
+    --widgetBackgroundColor: rgba(80, 80, 80, 0.5);
+    --tableFontColor: white;
+}
+
+[data-theme='light'] {
+    --fontColor: black;
+    --widgetBackgroundColor: rgba(255, 255, 255, 0.3);
+    --tableFontColor: black;
+}

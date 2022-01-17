@@ -1,6 +1,7 @@
 import React from "react";
-import {PieChart, Pie, Legend, Tooltip, Cell, ResponsiveContainer} from "recharts";
+import {PieChart, Pie, Legend, Tooltip, Cell} from "recharts";
 import "./OrdersWidget.js.css"
+import "./Widget.css"
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
 import WidgetHead from "../Molecules/WidgetHead";
@@ -37,7 +38,7 @@ function OrdersWidget() {
     return (
         <div className={"widget"}>
             <WidgetHead widgetTitle={t("ordersWidgetName")}/>
-            <PieChart width={400} height={400} >
+            <PieChart width={400} height={400} className={"pieChart"}>
                 <Legend formatter={renderLegend} />
                 <Pie
                     dataKey="value"
@@ -55,7 +56,6 @@ function OrdersWidget() {
                     ))}
                 </Pie>
                 <Tooltip content={<CustomTooltip />} />
-
             </PieChart>
         </div>
     );

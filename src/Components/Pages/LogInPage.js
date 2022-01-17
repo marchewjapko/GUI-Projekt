@@ -1,12 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import "./LogInPage.js.css"
 import {ReactComponent as AccountIcon} from "../../Images/Account.svg";
 import {ReactComponent as PasswordIcon} from "../../Images/Lock.svg";
 import {ReactComponent as ArrowRightIcon} from "../../Images/Arrow-Right.svg";
 import { useTranslation } from 'react-i18next';
-
 import Head from "../Molecules/Head";
-
 import {useNavigate} from "react-router-dom"
 
 function LogInPage() {
@@ -17,7 +15,7 @@ function LogInPage() {
     }
     return (
         <div className={"logInPage"}>
-            <Head/>
+            <Head headTitle=""/>
             <AccountIcon className={"accountIconBig"}/>
             <div className={"rectangle"}>
                 <div className={"centerImage"}>

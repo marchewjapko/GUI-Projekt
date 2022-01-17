@@ -67,6 +67,11 @@
     margin-bottom: 20px;
 }
 
+.loginButton:hover {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
 .arrow {
     width: 25px;
     height: 25px;
