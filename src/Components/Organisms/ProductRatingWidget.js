@@ -4,19 +4,19 @@ import "./Widget.css"
 import {useTranslation} from "react-i18next";
 import WidgetHead from "../Molecules/WidgetHead";
 import ReactStars from 'react-stars'
-import {ProductRatingDataAll} from "../../Data/ProductRatingDataAll.js"
+import {ProductRatingData} from "../../Data/ProductRatingData.js"
 
 function ProductRatingWidget() {
     const {t} = useTranslation(['productRatingWidget']);
     const [underlinePosStyle, setUnderLinePos] = useState();
     const [tableData, setTableData] = useState(
-        ProductRatingDataAll.filter(e => e.rating >= 0).slice(0,4).map(el => {
+        ProductRatingData.filter(e => e.rating >= 0).slice(0,4).map(el => {
                 return (
                     <tr>
-                        <td className="rowComment">
+                        <td className="rowProduct">
                             {el.comment}
                         </td>
-                        <td className="rowRating">
+                        <td className="rowProductRating">
                             <ReactStars
                                 count={5}
                                 size={20}
@@ -24,7 +24,7 @@ function ProductRatingWidget() {
                                 edit={false}
                                 color2={'#F1C644'} />
                         </td>
-                        <td className="rowDate">
+                        <td className="rowProduct">
                             {el.date}
                         </td>
                     </tr>
@@ -34,13 +34,13 @@ function ProductRatingWidget() {
 
     const handleClickCategory1 = () => {
         setTableData(
-            ProductRatingDataAll.filter(e => e.rating >= 0).slice(0,4).map(el => {
+            ProductRatingData.filter(e => e.rating >= 0).slice(0,4).map(el => {
                 return (
                     <tr>
-                        <td className="rowComment">
+                        <td className="rowProduct">
                             {el.comment}
                         </td>
-                        <td className="rowRating">
+                        <td className="rowProductRating">
                             <ReactStars
                                 count={5}
                                 size={20}
@@ -48,7 +48,7 @@ function ProductRatingWidget() {
                                 edit={false}
                                 color2={'#F1C644'} />
                         </td>
-                        <td className="rowDate">
+                        <td className="rowProduct">
                             {el.date}
                         </td>
                     </tr>
@@ -63,13 +63,13 @@ function ProductRatingWidget() {
     }
     const handleClickCategory2 = () => {
         setTableData(
-            ProductRatingDataAll.filter(e => e.rating > 2.5).slice(0,4).map(el => {
+            ProductRatingData.filter(e => e.rating > 2.5).slice(0,4).map(el => {
                 return (
                     <tr>
-                        <td className="rowComment">
+                        <td className="rowProduct">
                             {el.comment}
                         </td>
-                        <td className="rowRating">
+                        <td className="rowProductRating">
                             <ReactStars
                                 count={5}
                                 size={20}
@@ -77,7 +77,7 @@ function ProductRatingWidget() {
                                 edit={false}
                                 color2={'#F1C644'} />
                         </td>
-                        <td className="rowDate">
+                        <td className="rowProduct">
                             {el.date}
                         </td>
                     </tr>
@@ -92,13 +92,13 @@ function ProductRatingWidget() {
     }
     const handleClickCategory3 = () => {
         setTableData(
-            ProductRatingDataAll.filter(e => e.rating <= 2.5).slice(0,4).map(el => {
+            ProductRatingData.filter(e => e.rating <= 2.5).slice(0,4).map(el => {
                 return (
                     <tr>
-                        <td className="rowComment">
+                        <td className="rowProduct">
                             {el.comment}
                         </td>
-                        <td className="rowRating">
+                        <td className="rowProductRating">
                             <ReactStars
                                 count={5}
                                 size={20}
@@ -106,7 +106,7 @@ function ProductRatingWidget() {
                                 edit={false}
                                 color2={'#F1C644'} />
                         </td>
-                        <td className="rowDate">
+                        <td className="rowProduct">
                             {el.date}
                         </td>
                     </tr>
@@ -123,19 +123,19 @@ function ProductRatingWidget() {
     return (
         <div className={"widget"}>
             <WidgetHead widgetTitle={t("productRatingWidgetName")}/>
-            <div className={"optionBar"}>
-                <ul>
-                    <li className="option"><a onClick={handleClickCategory1}>{t("all")}</a></li>
-                    <li className="option"><a onClick={handleClickCategory2}>{t("positive")}</a></li>
-                    <li className="option"><a onClick={handleClickCategory3}>{t("negative")}</a></li>
-                    <hr style={underlinePosStyle}/>
+            <div className={"optionBarProduct"}>
+                <ul className={"ulProduct"}>
+                    <li className="option"><a className={"aProduct"} onClick={handleClickCategory1}>{t("all")}</a></li>
+                    <li className="option"><a className={"aProduct"} onClick={handleClickCategory2}>{t("positive")}</a></li>
+                    <li className="option"><a className={"aProduct"} onClick={handleClickCategory3}>{t("negative")}</a></li>
+                    <hr style={underlinePosStyle} className={"productRatingUnderline"}/>
                 </ul>
             </div>
-            <table className="tg">
+            <table className="tgProduct">
                 <thead>
                 <tr>
-                    <th className="headComments">{t("comments")}</th>
-                    <th className="headRating">{t("rating")}</th>
+                    <th className="headTable">{t("comments")}</th>
+                    <th className="headTableRating">{t("rating")}</th>
                     <th className="headDate">{t("date")}</th>
                 </tr>
                 </thead>

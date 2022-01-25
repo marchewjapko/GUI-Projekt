@@ -1,23 +1,32 @@
-.optionBarProduct {
+.optionBar {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.option {
+.widgetSales {
+    text-align: center;
+    background-color: var(--widgetBackgroundColor);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding-bottom: 20px;
+    display:block
+}
+
+.liSales {
     display: inline;
     text-align: center;
 }
 
-.ulProduct {
+.ulSales {
     padding: 0;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.aProduct {
+.aSales {
     display: inline-block;
-    width: 33%;
+    width: 50%;
     padding: .75rem 0;
     margin: 0;
     text-decoration: none;
@@ -30,31 +39,77 @@ a:hover {
     cursor: pointer;
 }
 
-.productRatingUnderline {
+.salesUnderline {
     height: .2rem;
-    width: 33.3%;
+    width: 50%;
     margin: 0;
     background: var(--fontColor);
     border: none;
     transition: .3s ease-in-out;
 }
 
-.tgProduct {
-    border-collapse: collapse;
-    border-spacing: 0;
-    max-width: 1300px;
-    margin-left: 20px;
-    margin-right: 20px;
+.headRating {
+    min-width: 110px;
+    text-align: center;
 }
 
-.headTable {
+.headDate {
+    text-align: right;
+}
+
+.rowSales {
+    text-align: left;
+    border-bottom: 1px;
+    border-bottom-color: #808080;
+    border-bottom-style: solid;
+    padding: 5px;
+    color: var(--tableFontColor);
+    word-break: normal;
+    font-size: 0.8em;
+}
+
+.rowSalesMiddle {
+    text-align: center;
+    border-bottom: 1px;
+    border-bottom-color: #808080;
+    border-bottom-style: solid;
+    padding: 5px;
+    color: var(--tableFontColor);
+    word-break: normal;
+    font-size: 0.8em;
+}
+
+.rowSalesRight {
+    text-align: right;
+    border-bottom: 1px;
+    border-bottom-color: #808080;
+    border-bottom-style: solid;
+    padding: 5px;
+    color: var(--tableFontColor);
+    word-break: normal;
+    font-size: 0.8em;
+}
+
+.headRight {
+    font-size: 1.25em;
+    background-color: #5675E4;
+    color: white;
+    text-align: right;
+}
+
+.headSalesName {
     text-align: left;
     font-size: 1.25em;
     background-color: #5675E4;
     color: white;
 }
 
-.headTableRating {
+.salesTableDiv {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.headSales {
     font-size: 1.25em;
     background-color: #5675E4;
     color: white;
@@ -62,48 +117,33 @@ a:hover {
     text-align: center;
 }
 
-.headDate {
-    font-size: 1.25em;
-    background-color: #5675E4;
-    color: white;
-    text-align: right;
-}
-
-.rowProduct {
+.tgSales {
+    border-collapse: collapse;
+    border-spacing: 0;
     text-align: left;
-    border-bottom: 1px;
-    border-bottom-color: #808080;
-    border-bottom-style: solid;
-    padding: 5px;
-    color: var(--tableFontColor);
-    word-break: normal;
-    font-size: 0.8em;
-}
-
-.rowProductRating {
-    width: 100px;
-    text-align: left;
-    border-bottom: 1px;
-    border-bottom-color: #808080;
-    border-bottom-style: solid;
-    padding: 5px;
-    color: var(--tableFontColor);
-    word-break: normal;
-    font-size: 0.8em;
-}
-
-.tg {
-    text-align: left;
-    vertical-align: top
+    vertical-align: top;
+    width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-    .rowProduct {
+    .rowSales {
         font-size: 1em;
     }
 
-    .aProduct {
+    .rowSalesMiddle {
         font-size: 1em;
+    }
+
+    .rowSalesRight {
+        font-size: 1em;
+    }
+
+    .aSales {
+        font-size: 1.5em;
+    }
+
+    .widgetSales {
+        width: 500px;
     }
 }
 

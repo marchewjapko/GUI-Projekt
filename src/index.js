@@ -14,6 +14,8 @@ import ordersWidgetTranslationEN from "./translations/en/orderWidgetTranslation.
 import ordersWidgetTranslationPL from "./translations/pl/orderWidgetTranslation.json";
 import productRatingTranslationEN from "./translations/en/productRatingWidgetTranslation.json"
 import productRatingTranslationPL from "./translations/pl/productRatingWidgetTranslation.json"
+import salesTranslationEN from "./translations/en/salesWidgetTranslation.json"
+import salesTranslationPL from "./translations/pl/salesWidgetTranslation.json"
 
 i18next.init({
     interpolation: {escapeValue: false},
@@ -23,13 +25,15 @@ i18next.init({
             loginPage: loginPageTranslationEN,
             mainPage: mainPageTranslationEN,
             ordersWidget: ordersWidgetTranslationEN,
-            productRatingWidget: productRatingTranslationEN
+            productRatingWidget: productRatingTranslationEN,
+            salesWidget: salesTranslationEN
         },
         pl: {
             loginPage: loginPageTranslationPL,
             mainPage: mainPageTranslationPL,
             ordersWidget: ordersWidgetTranslationPL,
-            productRatingWidget: productRatingTranslationPL
+            productRatingWidget: productRatingTranslationPL,
+            salesWidget: salesTranslationPL
         },
     },
 });

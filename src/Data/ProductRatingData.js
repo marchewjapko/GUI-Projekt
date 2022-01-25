@@ -1,4 +1,4 @@
-export const ProductRatingDataAll = [
+export const ProductRatingData = [
     {
         key: 0,
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc rutrum, urna nec molestie fringilla, lectus tortor faucibus elit, vel pretium ipsum sapien non ligula. Etiam iaculis purus felis, vitae auctor nibh tristique ac. Nam aliquam lacinia auctor.",

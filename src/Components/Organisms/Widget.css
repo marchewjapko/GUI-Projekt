@@ -4,4 +4,5 @@
     backdrop-filter: blur(20px);
     border-radius: 30px;
     padding-bottom: 20px;
+    display:block
 }
