@@ -92,7 +92,7 @@
 }
 
 [data-theme='light'] {
-    --pageColor: white;
+    --pageColor: #C4C4C4;
     --switchIconColor: black;
     --backgroundAccountIconBig: #AAAAAA;
     --fillAccountIconBig: white;
