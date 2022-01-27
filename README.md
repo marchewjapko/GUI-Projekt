@@ -1,5 +1,6 @@
 Projekt uruchamiamy poleceniem:
+`npm install`
 `npm start`
 
 Aplikacja dostępna pod:
-Open [http://localhost:3000](http://localhost:3000)
+[http://localhost:3000](http://localhost:3000)
