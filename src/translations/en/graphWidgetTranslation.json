@@ -1,0 +1,10 @@
+{
+  "graphWidgetName": "Sales graph",
+  "turnover": "Turnover",
+  "sales": "Sales",
+  "today": "Today",
+  "thisWeek": "This week",
+  "thisYear": "This year",
+  "graphLine": "Line chart",
+  "graphBar": "Bar chart"
+}

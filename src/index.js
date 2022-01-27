@@ -16,6 +16,8 @@ import productRatingTranslationEN from "./translations/en/productRatingWidgetTra
 import productRatingTranslationPL from "./translations/pl/productRatingWidgetTranslation.json"
 import salesTranslationEN from "./translations/en/salesWidgetTranslation.json"
 import salesTranslationPL from "./translations/pl/salesWidgetTranslation.json"
+import graphWidgetTranslationEN from "./translations/en/graphWidgetTranslation.json"
+import graphWidgetTranslationPL from "./translations/pl/graphWidgetTranslation.json"
 
 i18next.init({
     interpolation: {escapeValue: false},
@@ -26,14 +28,16 @@ i18next.init({
             mainPage: mainPageTranslationEN,
             ordersWidget: ordersWidgetTranslationEN,
             productRatingWidget: productRatingTranslationEN,
-            salesWidget: salesTranslationEN
+            salesWidget: salesTranslationEN,
+            graphWidget: graphWidgetTranslationEN
         },
         pl: {
             loginPage: loginPageTranslationPL,
             mainPage: mainPageTranslationPL,
             ordersWidget: ordersWidgetTranslationPL,
             productRatingWidget: productRatingTranslationPL,
-            salesWidget: salesTranslationPL
+            salesWidget: salesTranslationPL,
+            graphWidget: graphWidgetTranslationPL
         },
     },
 });

@@ -1,0 +1,78 @@
+.responsiveContainer {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.graphOptions {
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 50% 50%;
+}
+
+.select1 {
+    grid-column: 1;
+    grid-row: 1;
+    background: var(--selectColor);
+}
+.select2 {
+    grid-column: 2;
+    grid-row: 1;
+    background: var(--selectColor);
+}
+.select3 {
+    grid-column: 1;
+    grid-column-end: span 2;
+    grid-row: 2;
+    background: var(--selectColor);
+}
+
+.custom-tooltip {
+    padding: 1px 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+text {
+    fill: var(--fontColor)
+}
+
+line {
+    stroke: var(--fontColor)
+}
+
+@media only screen and (min-width: 1100px) {
+    .responsiveContainer {
+        padding-top: 10px;
+    }
+    .graphOptions {
+
+        grid-template-columns: 32.7% 32.7% 32.7%;
+    }
+    .select1 {
+        grid-column: 1;
+        grid-row: 1;
+        background: var(--selectColor);
+    }
+    .select2 {
+        grid-column: 2;
+        grid-row: 1;
+        background: var(--selectColor);
+    }
+    .select3 {
+        grid-column: 3;
+        grid-row: 1;
+        background: var(--selectColor);
+    }
+}
+
+[data-theme='dark'] {
+    --fontColor: white;
+    --selectColor: #202020;
+}
+
+[data-theme='light'] {
+    --fontColor: black;
+    --selectColor: #D1D1D1;
+}

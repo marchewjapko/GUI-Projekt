@@ -13,12 +13,11 @@
     "react-i18next": "^11.15.3",
     "react-router-dom": "^6.2.1",
     "react-scripts": "4.0.3",
+    "react-select": "^5.2.2",
     "react-stars": "^2.2.5",
     "react-switch": "^6.0.0",
     "recharts": "^2.1.8",
-    "semantic-ui-css": "^2.4.1",
-    "use-local-storage": "^2.2.6",
-    "web-vitals": "^1.1.2"
+    "use-local-storage": "^2.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,7 +45,6 @@
   },
   "devDependencies": {
     "file-loader": "^6.2.0",
-    "semantic-ui-react": "^2.0.4",
     "src": "^1.1.2"
   }
 }
