@@ -102,12 +102,13 @@ function ProductRatingWidget() {
             <div className={"productRatingContainer"}>
                 <div className={"optionBarProduct"}>
                     <ul className={"ulProduct"}>
-                        <li className="option"><a className={"aProduct"} onClick={handleClickCategory1}>{t("all")}</a>
+                        <li className="option"><a className={"aProduct"}
+                          onClick={handleClickCategory1}>{t("all")}</a>
                         </li>
                         <li className="option"><a className={"aProduct"}
-                                                  onClick={handleClickCategory2}>{t("positive")}</a></li>
+                          onClick={handleClickCategory2}>{t("positive")}</a></li>
                         <li className="option"><a className={"aProduct"}
-                                                  onClick={handleClickCategory3}>{t("negative")}</a></li>
+                          onClick={handleClickCategory3}>{t("negative")}</a></li>
                         <hr style={underlinePosStyle} className={"productRatingUnderline"}/>
                     </ul>
                 </div>

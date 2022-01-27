@@ -125,17 +125,20 @@ a:hover {
     .productRatingContainer {
         max-height: 435px;
         overflow-y: scroll;
+        scrollbar-color: var(--scrollColor) rgba(0,0,0,0);
     }
 }
 
 [data-theme='dark'] {
     --fontColor: white;
     --widgetBackgroundColor: rgba(80, 80, 80, 0.5);
+    --scrollColor: #202020;
     --tableFontColor: white;
 }
 
 [data-theme='light'] {
     --fontColor: black;
     --widgetBackgroundColor: rgba(255, 255, 255, 0.3);
+    --scrollColor: white;
     --tableFontColor: black;
 }
