@@ -56,7 +56,7 @@ export const ProductRatingData = [
     {
         key: 9,
         comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet ante iaculis, facilisis risus nec, vestibulum magna. Aliquam ac volutpat sem. Proin id risus aliquam, efficitur neque sollicitudin, volutpat mi. Sed iaculis blandit orci.",
-        rating: 0,
+        rating: 10,
         date: "12.01.2022",
     },
 ];
