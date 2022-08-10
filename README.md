@@ -1,6 +1,2 @@
-Projekt uruchamiamy poleceniem:
-`npm install`
-`npm start`
-
-Aplikacja dostępna pod:
-[http://localhost:3000](http://localhost:3000)
+# Seller's Dashboard
+CodeSandbox link with app: https://codesandbox.io/s/sellers-dashboard-szhy0p
