@@ -1,4 +1,4 @@
-# Seller's Dashboard
+# Vendor's Dashboard
 A WebApp for monitoring a vendor's *stuff*.
 
 ## Tech Stack
